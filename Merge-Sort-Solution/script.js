@@ -11,9 +11,7 @@ function mergeSort(arr){
     let mergedArr = []
     
    //Merging Elements 
-    while(true){
-        if(!arrLeft.length && !arrRight.length) return mergedArr
-
+    while(arrLeft.length || arrRight.length){
         if(arrLeft.length && arrRight.length){
             mergedArr.push(arrLeft[0] < arrRight[0] ? arrLeft.shift(): arrRight.shift())
         }else if (!arrLeft.length){
@@ -22,5 +20,6 @@ function mergeSort(arr){
             mergedArr.push(arrLeft.shift())
         }
     }
+    return mergedArr
 }
 console.log(sortedArray)
